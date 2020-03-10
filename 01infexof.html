@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <script>
+        //请用户输入一条消息内容
+        var input=prompt("请输入消息内容");
+        //查找消息中是否包含我草
+        var i=input.search(/([我卧]|wo)\s*([艹草操]|cao)/i);//i写在最后一个斜线后面 忽略大小写 只管拼音
+        //如果找到 就在网页上输出 发现敏感词，禁止发送
+        if(i!=-1){
+            document.write(`<h1 style="color:red;">包含敏感词禁止发送</h1>`);
+        }else{
+            //如果没有找到 就在网页上输出 然哥说：xxxx
+            document.write(`<h1 style="color:green;">然哥说:${input}</h1>`);
+        }
+        
+        
+    </script>
+</body>
+</html>

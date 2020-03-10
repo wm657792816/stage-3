@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //0宽断言 密码强度
+        var input=prompt("请输入你的密码");
+        var i=input.search(/^(?![0-9a-z]+$)(?![A-Za-z]+$)([0-9A-Za-z]{6,}$)/);
+        if(i!=-1){
+            document.write(`<h1 style="color:red;">${input}</h1>`);
+        }else{
+            document.write(`<h1 style="color:green;">你的密码格式错误</h1>`);
+        }
+    </script>
+</body>
+</html>
